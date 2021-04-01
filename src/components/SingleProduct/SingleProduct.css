@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+.productdesc {
+  margin-left: 150px !important;
+  margin-right: 150px !important;
+  margin-top: 20px !important;
+  background-color: white;
+}
+
+.flex-container {
+  margin-left: 150px !important;
+  margin-right: 150px !important;
+  margin-top: 50px !important;
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  height: 400px !important;
+  padding: 10px !important;
+  background-color: white;
+}
+
+.flex-item-left {
+  padding: 0px;
+  flex: 50%;
+  display: inline;
+  margin-left: 5px !important;
+  background-color: white !important;
+}
+
+.flex-item-right {
+  padding: 10px;
+  flex: 50%;
+  margin-right: 10px !important;
+  text-align: left !important;
+  background-color: khaki !important;
+}
+
+.my-product-img {
+  height: 320px;
+  width: 344px;
+  box-sizing: border-box;
+  margin-left: 0% !important;
+  margin-top: 10px;
+}
+.browse {
+  margin-left: 140px;
+}
+
+.eachimage {
+  height: 80px !important;
+  width: 80px !important;
+}
+.firstcol {
+  width: 10px !important;
+  text-align: right;
+  margin-left: 10px;
+  background-color: white;
+}
+.secondcol {
+  background-color: white;
+}
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 420px) {
+  .flex-container {
+    flex-direction: column;
+    margin-left: 1px !important;
+    margin-right: 0px !important;
+    margin-top: 10px !important;
+  }
+  .flex-item-left {
+    width: 100% !important;
+  }
+
+  .flex-item-right {
+    width: 100% !important;
+    margin-left: 1px !important;
+  }
+  .firstcol {
+    width: 20px;
+    margin-left: 10px;
+  }
+  .my-product-img {
+    height: 250px;
+    width: 250px;
+  }
+  .secondcol {
+    margin-right: 40px;
+  }
+  .eachimage {
+    height: 70px !important;
+    width: 65px !important;
+  }
+  .browse {
+    margin-left: 20px;
+  }
+  .productdesc {
+    margin-left: 15px !important;
+    margin-right: 10px !important;
+    margin-top: 350px !important;
+    background-color: white;
+  }
+}

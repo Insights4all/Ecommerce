@@ -1,0 +1,19 @@
+.searchbar {
+  width: 450px !important;
+  margin-right: 5px;
+}
+.searchbtn {
+  margin-right: 30px;
+}
+
+@media (max-width: 420px) {
+  .searchbar {
+    width: 220px !important;
+    height: 35px;
+    margin-right: 2px;
+  }
+  .searchbtn {
+    margin-right: 0%;
+    margin-left: 2px;
+  }
+}

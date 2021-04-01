@@ -1,0 +1,11 @@
+@media (max-width: 420px) {
+  #carttable {
+    padding: 5px !important;
+    font-size: 16px !important;
+    margin: 0% !important;
+  }
+  .itemimage {
+    height: 60px !important;
+    width: 60px !important;
+  }
+}

@@ -1,0 +1,17 @@
+.footer {
+  background-color: bisque;
+}
+
+.footer-row {
+  margin-left: 30px;
+}
+@media (max-width: 420px) {
+  .footer-row {
+    margin-left: 0px !important;
+    padding: 3% !important;
+    font-size: small;
+    height: 150px;
+    background-color: black;
+    color: aliceblue;
+  }
+}
