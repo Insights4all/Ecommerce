@@ -9,6 +9,7 @@ import SignUp from "./components/Signup/Signup";
 import Category from "./components/EachCategory/Category";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
 import Cart from "./components/Cart/Cart";
+import AddProduct from "./components/AddProduct/addproduct";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/category" component={Category} />
         <Route path="/product" component={SingleProduct} />
         <Route path="/cart" component={Cart} />
+        <Route path="/addproduct" component={AddProduct} />
       </Switch>
     </Router>
   );

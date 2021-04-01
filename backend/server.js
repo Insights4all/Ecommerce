@@ -28,21 +28,6 @@ mongoose.connection.on("connected", () => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-//HTTP request logger
-
-//Routes for checking server
-app.get("/api", (req, res) => {
-  console.log("Inside gET API");
-
-  AllProduct.find({})
-    .then((data) => {
-      console.log("Data", data);
-      res.json(data);
-    })
-    .catch((error) => {
-      console.log("No data found");
-    });
-});
 
 app.post("/save", (req, res) => {
   console.log("body", req.body);
