@@ -10,6 +10,7 @@ import Category from "./components/EachCategory/Category";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
 import Cart from "./components/Cart/Cart";
 import AddProduct from "./components/AddProduct/addproduct";
+import AllProduct from "./components/AllProduct/allproduct";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <Route path="/contact-us" component={Contact} />
         <Route path="/sign-up" component={SignUp} />
         <Route path="/category" component={Category} />
-        <Route path="/product" component={SingleProduct} />
+        <Route path="/singleproduct" component={SingleProduct} />
+        <Route path="/allproduct" component={AllProduct} />
         <Route path="/cart" component={Cart} />
         <Route path="/addproduct" component={AddProduct} />
       </Switch>
