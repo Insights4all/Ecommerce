@@ -5,25 +5,24 @@ import axios from "axios";
 import Footer from "../Footer/Footer";
 
 function AllProduct() {
-  const [products, setProducts] = useState("");
-
+  const [products, setProducts] = useState([]);
   useEffect(() => {
     getAllProduct();
-  });
+  }, []);
 
   function getAllProduct() {
     axios
       .get("/api")
       .then((response) => {
         const data = response.data;
-        console.log("Fetched Data");
         setProducts(data);
-        console.log("My products", products);
       })
       .catch((error) => {
         console.log("Erroorrrr");
       });
   }
+
+  console.log("abcd", products);
 
   return (
     <div>
