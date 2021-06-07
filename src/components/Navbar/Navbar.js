@@ -3,9 +3,13 @@ import "./Navbar.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { useStateValue } from "../../StateProvider";
 
 function Navbar() {
-  var isLoggedin = false;
+  // var isLoggedin;
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [{ basket }, dispatch] = useStateValue();
+
   useEffect(() => {
     checklogin();
   });
@@ -14,18 +18,20 @@ function Navbar() {
     axios
       .get("/checklogin")
       .then((response) => {
-        if (response.data == "Yes") {
-          isLoggedin = true;
-          console.log(isLoggedin);
+        if (response.data === "Yes") {
+          setIsLoggedIn(true);
+          console.log(isLoggedIn);
         } else {
-          isLoggedin = false;
-          console.log(isLoggedin);
+          setIsLoggedIn(false);
+          console.log(isLoggedIn);
         }
       })
       .catch((error) => {
         console.log("Erroorrrr");
       });
   }
+
+  console.log("resulttt", isLoggedIn);
   return (
     <div>
       <nav class="navbar navbar-expand-md bg-light navbar-dark text-primary">
@@ -85,19 +91,17 @@ function Navbar() {
               </Link>
             </li>
 
-            {isLoggedin ? (
-              <li class="nav-item">
+            <li class="nav-item">
+              {isLoggedIn ? (
                 <Link to="/logout" class="nav-link p-3 text-primary">
                   Logout
                 </Link>
-              </li>
-            ) : (
-              <li class="nav-item">
+              ) : (
                 <Link to="/login" class="nav-link p-3 text-primary">
                   Login
                 </Link>
-              </li>
-            )}
+              )}
+            </li>
           </ul>
         </div>
         <form className="form-inline my-2 my-lg-0">
@@ -113,6 +117,9 @@ function Navbar() {
             Search
           </button>{" "}
         </form>
+        <div>
+          <span>{basket.length}</span>
+        </div>
       </nav>
     </div>
   );

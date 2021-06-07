@@ -120,6 +120,7 @@ function Home() {
                 <h6 className="text-center mt-2 mb-2 product-price">
                   <i class="fas fa-rupee-sign"></i>599 | 15% off
                 </h6>
+
                 <a
                   href="#"
                   className=" btn btn-danger w-100 text-center addcart"

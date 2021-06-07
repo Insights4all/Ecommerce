@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../Navbar/Navbar";
 import Product from "../Product/Product";
 import axios from "axios";
 import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 function AllProduct() {
   const [products, setProducts] = useState([]);
@@ -26,6 +26,7 @@ function AllProduct() {
 
   return (
     <div>
+      <Navbar />
       <div class="row ml-3 mr-3" id="product-row">
         {products.map((x) => (
           <Product
