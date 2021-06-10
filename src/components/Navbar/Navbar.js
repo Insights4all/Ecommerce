@@ -81,13 +81,18 @@ function Navbar() {
               </Link>
             </li>
             <li class="nav-item">
-              <Link to="/contact-us" class="nav-link p-3 text-primary">
-                Contact Us
+              <Link to="/allproduct" class="nav-link p-3 text-primary">
+                Products
               </Link>
             </li>
             <li class="nav-item">
               <Link to="/register" class="nav-link p-3 text-primary">
                 Register
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link to="/cart" class="nav-link p-3 text-primary">
+                Cart
               </Link>
             </li>
 

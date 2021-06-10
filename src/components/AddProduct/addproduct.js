@@ -4,7 +4,7 @@ import axios from "axios";
 function AddProduct() {
   const [title, setTitle] = useState("");
   const [desc, setdesc] = useState("");
-  const [price, setprice] = useState("");
+  const [price, setprice] = useState(0);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -26,7 +26,7 @@ function AddProduct() {
   function reset() {
     setTitle("");
     setdesc("");
-    setprice("");
+    setprice(0);
   }
 
   return (
@@ -45,7 +45,7 @@ function AddProduct() {
           onChange={(e) => setdesc(e.target.value)}
         />
         <input
-          type="text"
+          type="number"
           name="price"
           value={price}
           onChange={(e) => setprice(e.target.value)}
