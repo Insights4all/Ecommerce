@@ -58,6 +58,24 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+
+
+
+
+app.get("/getproduct", (req, res) => {
+  const data = req.body;
+  console.log("got this body", data, "---", data.title);
+
+  AllProduct.find({ title: data.title })
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((error) => {
+      console.log("No data found", error);
+      res.json("error", error);
+    });
+});
+
 //Routes for checking server
 app.get("/api", (req, res) => {
   console.log("Inside gET API");
